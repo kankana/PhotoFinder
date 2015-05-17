@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Photo Finder</string>
+
+    <string name="header_text">Recent public Flickr photos: </string>
+    <string name="action_refresh">Refresh</string>
+    <string name="str_search_failed">No Flicker images. Please try again.</string>
+    <string name="str_connection_error">You are not connected to internet. Please try connecting to internet first.</string>
+    <string name="str_tag_search">Search</string>
+    <string name="str_search_hint">Type any tag to search images</string>
+    <string name="server_down">Flickr is unavailable. Please try after sometime.</string>
+    <string name="str_tag_search_header">Photos with tag : %s</string>
+    <string name="str_imageTitle">Title : %s</string>
+    <string name="str_author">Author : %s</string>
+    <string name="str_views">Number of Views : %s</string>
+    <string name="str_description">Description : </string>
+    <string name="str_tags">Tags : %s</string>
+    <string name="str_dateTaken">Photo capture date : %s</string>
+    <string name="str_original_format">Image format (original) : %s</string>
+    <string name="separator"> - </string>
+</resources>
