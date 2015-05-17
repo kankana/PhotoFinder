@@ -115,6 +115,8 @@ public class ResultGridFragment extends Fragment implements IResultListener {
                 = (ConnectivityManager) mActivity.getSystemService(getActivity().CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+
+
     }
 
     private void startTask(int page) {
@@ -216,9 +218,6 @@ public class ResultGridFragment extends Fragment implements IResultListener {
 
             final Photo photo = (Photo) mAdapter.getItem(position);
             String thumbnailUrl = photo.getLargeSquareUrl();
-            /*if (mHighQualityThumbnails) {
-                thumbnailUrl = photo.getMediumUrl();
-            }*/
 
             Picasso.with(mActivity).load(thumbnailUrl).into(holder.image);
             return convertView;
@@ -230,10 +229,10 @@ public class ResultGridFragment extends Fragment implements IResultListener {
         public ImageView image;
     }
 
-    //@Override
-    protected boolean cacheInBackground() {
-        startTask(++mPage);
-        return true;
+    boolean cacheInBackground() {
+        ++mPage;
+        startTask(mPage);
+        return mMorePages;
     }
 
 }
